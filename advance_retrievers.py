@@ -89,5 +89,8 @@ def create_hf_llm():
         print("Error creating hugging face llm: ",e)
         return
     
-hf_login()
-create_hf_llm()
+def hh_embeddings():
+    embeddings = HuggingFaceEmbedding(
+        model_name="BAAI/bge-small-en-v1.5"
+    )
+    return embeddings
